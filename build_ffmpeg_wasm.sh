@@ -18,6 +18,7 @@
 # -O2 \
 # -v ffmpeg.bc \
 # -o ./ffmpeg.js --pre-js ./ffmpeg_pre.js --post-js ./ffmpeg_post.js
+
 rm ffmpeg.js ffmpeg.wasm
 emcc ./dist/lib/libavcodec.a ./dist/lib/libavutil.a ./dist/lib/libswscale.a \
 -s RESERVED_FUNCTION_POINTERS=1 \

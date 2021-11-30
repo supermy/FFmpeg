@@ -20,7 +20,8 @@
 # -o ./ffmpeg.js --pre-js ./ffmpeg_pre.js --post-js ./ffmpeg_post.js
 
 rm ffmpeg.js ffmpeg.wasm
-emcc ./dist/lib/libavcodec.a ./dist/lib/libavutil.a ./dist/lib/libswscale.a \
+# emcc ./dist/lib/libavcodec.a ./dist/lib/libavutil.a ./dist/lib/libswscale.a \
+emcc fftools/ffmpeg.c ./dist/lib/libavcodec.a ./dist/lib/libavutil.a ./dist/lib/libswscale.a \
 -s RESERVED_FUNCTION_POINTERS=1 \
 -s INLINING_LIMIT=1 \
 -s ALLOW_MEMORY_GROWTH=1 \

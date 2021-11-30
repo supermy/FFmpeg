@@ -6,7 +6,7 @@
 
 # 配置所需要的ffmpeg模块,并且构建.a文件所用到的脚本
 echo "开始配置ffmpeg......"
-# make clean
+make clean
 CPPFLAGS="-D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600" \
     # ranlib="emranlib" MacOS必须指定的ranlib
     # --disable-asm 禁用asm，asm会使用汇编webassemly不兼容  
